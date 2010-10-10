@@ -24,25 +24,25 @@
         <dependency>
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-api-1.0-labs</artifactId>
-            <version>${gae.version}</version>
+            <version>[${gae.version},)</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-api-1.0-stubs</artifactId>
-            <version>${gae.version}</version>
+            <version>[${gae.version},)</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-api-1.0-runtime</artifactId>
-            <version>${gae.version}</version>
+            <version>[${gae.version},)</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-tools-sdk</artifactId>
-            <version>${gae.version}</version>
+            <version>[${gae.version},)</version>
             <scope>test</scope>
         </dependency>
         <!--servlet and jsp api -->
@@ -62,7 +62,7 @@
         <dependency>
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-api-1.0-sdk</artifactId>
-            <version>${gae.version}</version>
+            <version>[${gae.version},)</version>
         </dependency>
         <dependency>
             <groupId>com.google.appengine.orm</groupId>
