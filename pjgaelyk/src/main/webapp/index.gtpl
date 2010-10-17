@@ -9,6 +9,7 @@
 
 <p>
     Click <a href="datetime.groovy">here</a> to view the current date/time.
+    Click <a href="entity.groovy">here</a> to save entity.
 </p>
 
 <% include '/WEB-INF/includes/footer.gtpl' %>
