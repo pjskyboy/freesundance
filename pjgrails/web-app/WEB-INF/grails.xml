@@ -1,0 +1,16 @@
+<grails>
+  <resources>
+    <resource>org.grails.appengine.AppEngineReloadController</resource>
+    <resource>DataSource</resource>
+    <resource>BootStrap</resource>
+    <resource>resources</resource>
+    <resource>UrlMappings</resource>
+    <resource>BuildConfig</resource>
+    <resource>Config</resource>
+    <resource>com.freesundance.Wibble</resource>
+    <resource>com.freesundance.WibbleController</resource>
+  </resources>
+  <plugins>
+    <plugin>AppEngineGrailsPlugin</plugin>
+  </plugins>
+</grails>
