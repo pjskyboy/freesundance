@@ -4,7 +4,7 @@
 
 <p>
     <%
-        log.info "outputing the datetime attribute"
+        log.info "outputting the datetime attribute"
     %>
     The current date and time: <%= request.getAttribute('datetime') %>
 </p>
