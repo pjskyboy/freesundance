@@ -1,0 +1,9 @@
+{
+	"id": "com.mystuff.hello",
+	"version": "1.0.0",
+	"vendor": "My Company",
+	"type": "web",
+	"main": "index.html",
+	"title": "Hello World",
+	"icon": "icon.png"
+}
