@@ -1,30 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated from archetype; please customize. -->
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.freesundance</groupId>
 	<artifactId>pjgaelyk</artifactId>
-	<version>1</version>
+	<name>Example Project</name>
+	<version>2</version>
 	<packaging>war</packaging>
-
-	<description>Gaelyk Template Project</description>
 
 	<properties>
 		<gaelyk.version>0.5.6</gaelyk.version>
 		<gmaven.version>1.3</gmaven.version>
 		<gae.version>1.3.8</gae.version>
 		<gaeplugin.version>0.7.2</gaeplugin.version>
+		<groovy.major.version>1.7</groovy.major.version>
+		<groovy.minor.version>4</groovy.minor.version>
 	</properties>
 
 	<dependencies>
+		<!-- Groovy runtime is needed when running unit tests written in Groovy 
+			using the Maven Surefire Plugin. -->
+		<dependency>
+			<groupId>org.codehaus.gmaven.runtime</groupId>
+			<artifactId>gmaven-runtime-${groovy.major.version}</artifactId>
+			<version>${gmaven.version}</version>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>groovyx.gaelyk</groupId>
 			<artifactId>gaelyk</artifactId>
-			<version>${gaelyk.version}</version>
+			<version>0.5.6</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>gdata-core-1.0</artifactId>
+			<version>[1.36.0,)</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>gdata-docs-3.0</artifactId>
+			<version>[1.36.0,)</version>
 		</dependency>
 	</dependencies>
 
+
 	<build>
+		<!-- Remap the source directories for this project. This is not strictly 
+			needed for Maven builds as the gmaven plugin correctly recognizes the groovy 
+			directories. But unless we do this the maven-eclipse-plugin won't generate 
+			the correct src classpathentries in the .classpath file, and the Groovy-Eclipse 
+			plugin won't correctly recognize Groovy source files, and syntax-highlighting, 
+			autocompletion etc. won't work. -->
+
+		<sourceDirectory>src/main/webapp</sourceDirectory>
+		<testSourceDirectory>src/test/groovy</testSourceDirectory>
+
+		<!-- Plugin configuration -->
+		<pluginManagement>
+			<plugins>
+
+				<!-- Tweak the generated Eclipse project to please the Groovy-Eclipse 
+					plugin -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<configuration>
+						<projectnatures>
+							<!-- Ensure that the Groovy nature is the first one so that the project 
+								is recognized as a Groovy project -->
+							<projectnature>org.eclipse.jdt.groovy.core.groovyNature</projectnature>
+							<projectnature>org.eclipse.jdt.core.javanature</projectnature>
+						</projectnatures>
+
+						<classpathContainers>
+							<!-- Add Groovy libs (from plugin) to Eclipse classpath -->
+							<classpathContainer>GROOVY_SUPPORT</classpathContainer>
+						</classpathContainers>
+
+						<sourceIncludes>
+							<!-- Force the inclusion of Groovy sources in the generated src classpathentries 
+								in .classpath -->
+							<sourceInclude>**/*.groovy</sourceInclude>
+						</sourceIncludes>
+					</configuration>
+				</plugin>
+
+				<!-- Configure the gmaven plugin -->
+				<plugin>
+					<groupId>org.codehaus.gmaven</groupId>
+					<artifactId>gmaven-plugin</artifactId>
+					<version>${gmaven.version}</version>
+
+					<executions>
+						<execution>
+							<goals>
+								<goal>generateStubs</goal>
+
+								<!-- Don't necessarily need this since Groovy is compiled to Java 
+									classes on the fly at run time, but it helps to catch syntax errors in the 
+									scripts at build time -->
+								<goal>compile</goal>
+
+								<goal>generateTestStubs</goal>
+
+								<!-- Don't necessarily need this since Groovy is compiled to Java 
+									classes on the fly at run time, but it helps to catch syntax errors in the 
+									scripts at build time -->
+								<goal>testCompile</goal>
+							</goals>
+						</execution>
+					</executions>
+
+					<dependencies>
+						<dependency>
+							<groupId>org.codehaus.gmaven.runtime</groupId>
+							<artifactId>gmaven-runtime-${groovy.major.version}</artifactId>
+							<version>${gmaven.version}</version>
+							<exclusions>
+								<!-- Ensure we always use the latest groovy version, rather than 
+									the one that happens to come with gmaven -->
+								<exclusion>
+									<groupId>org.codehaus.groovy</groupId>
+									<artifactId>groovy-all</artifactId>
+								</exclusion>
+							</exclusions>
+						</dependency>
+
+						<dependency>
+							<groupId>org.codehaus.groovy</groupId>
+							<artifactId>groovy-all</artifactId>
+							<version>${groovy.major.version}.${groovy.minor.version}</version>
+						</dependency>
+					</dependencies>
+
+					<configuration>
+						<providerSelection>${groovy.major.version}</providerSelection>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>6</source>
+						<target>6</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
 		<plugins>
 			<plugin>
 				<groupId>net.kindleit</groupId>
@@ -46,41 +178,18 @@
 					will have to run mvn gae:unpack the first time you run and every time you 
 					change gae.version thereafter. -->
 			</plugin>
-			<!-- Java compiler version -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.0</version>
-				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-				</configuration>
-			</plugin>
+
+			<!-- Activate the gmaven plugin -->
 			<plugin>
 				<groupId>org.codehaus.gmaven</groupId>
 				<artifactId>gmaven-plugin</artifactId>
-				<version>${gmaven.version}</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>generateStubs</goal>
-							<goal>compile</goal>
-							<goal>generateTestStubs</goal>
-							<goal>testCompile</goal>
-						</goals>
-						<configuration>
-							<providerSelection>1.7</providerSelection>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
 	<repositories>
 		<repository>
-			<id>maven-gaelyk-repo</id>
-			<name>maven-gaelyk repository</name>
-			<url>http://maven-gaelyk.googlecode.com/svn/repository</url>
+			<id>mandubian-mvn</id>
+			<url>http://mandubian-mvn.googlecode.com/svn/trunk/mandubian-mvn/repository</url>
 		</repository>
 	</repositories>
 </project>

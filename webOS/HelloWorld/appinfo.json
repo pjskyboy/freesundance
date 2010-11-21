@@ -1,9 +1,9 @@
 {
-	"id": "com.mystuff.hello",
+	"id": "com.freesundance.helloworld",
 	"version": "1.0.0",
-	"vendor": "My Company",
+	"vendor": "freesundance",
 	"type": "web",
 	"main": "index.html",
-	"title": "Hello World",
+	"title": "HelloWorld",
 	"icon": "icon.png"
 }

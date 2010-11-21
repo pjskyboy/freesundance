@@ -33,4 +33,5 @@ entity2['name'] = "Peter Jupp"
 log.info "entity2.name [" + entity2.name + "] entity2.age [" + entity2.age + "]"
 entity2.save()
 
+Documents.list
 forward "/index.gtpl"
