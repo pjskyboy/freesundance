@@ -1,5 +1,6 @@
-import com.google.appengine.api.datastore.*
 import static com.google.appengine.api.datastore.FetchOptions.Builder.*
+
+import com.google.appengine.api.datastore.*
 
 
 def query = new Query("person")
@@ -33,5 +34,5 @@ entity2['name'] = "Peter Jupp"
 log.info "entity2.name [" + entity2.name + "] entity2.age [" + entity2.age + "]"
 entity2.save()
 
-Documents.list
+
 forward "/index.gtpl"
