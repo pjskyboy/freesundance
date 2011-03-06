@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>My account - Check my usage</title>
+	<meta name="author" content="System Integration Development" />
+	<meta name="description" content="My 3 account gives you all the convenience and control of your account you could ever need - both here and on your 3 mobile." />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	
+	
+	
+	
+	<link href="/myaccount/style-my3/main.css" type="text/css" rel="stylesheet" title="Default style"/>
+	
+		
+	<script src="/myaccount/javascript/util.js" language="JavaScript" type="text/javascript"></script>
+	<script type="text/javascript">
+	
+		var ICHANNEL_ID='';
+		var ACTION='';
+	</script>
+	
+</head>
+
+
+
+		
+	<body class="my-account" id="usage-summary">
+
+
+	<div id="wrapper">
+	<h1>3</h1>
+	
+
+
+
+
+
+
+
+<div id="header">
+
+  <dl id="site-nav">
+    <dt id="tab-my3">My 3</dt>
+    
+ 	<dd id="menu-home"><a href="https://my3.three.co.uk/myaccount/index.do" title="(access key 1)" accesskey="1">My 3 home</a></dd>
+    
+ 	<dd id="menu-account"><a href="https://my3.three.co.uk/myaccount/selfcare.do" title="(access key 2)" accesskey="2">My account</a></dd>
+    
+ 	<dd id="menu-details"><a href="https://my3.three.co.uk/mydetails/index.do" title="(access key 3)" accesskey="3">My details</a></dd>
+    
+ 	<dd id="menu-security"><a href="https://my3.three.co.uk/mysecurity/change/change.do" title="(access key 4)" accesskey="4">My security</a></dd>
+    
+ 	<dd id="menu-alerts"><a href="https://my3.three.co.uk/myalerts/MyAlerts.jsp" title="(access key 5)" accesskey="5">My alerts</a></dd>
+    
+ 	<dd id="menu-handset"><a href="myHandsetClickThroughAction.do?target=https://my3.three.co.uk/ms/mymobile/index.php?errorUrl=https://my3.three.co.uk/myaccount/myHandsetErrorMessage.do&amp;menuName=My mobile" title="(access key 6)" accesskey="6">My mobile</a></dd>
+    
+ 	<dd id="menu-contact"><a href="https://my3.three.co.uk/myaccount/inboundEmail.do" title="(access key 7)" accesskey="7">Contact 3</a></dd>
+    
+    <dt id="ctrl">Controls</dt>
+    
+    <dd id="repair"><a href="https://www.totalrepair.co.uk/my3/status.aspx" title="(access key r)" accesskey="r">Track my repair</a></dd>
+    
+    <dd id="kana"><a href="http://www.three.co.uk/personal/help_support_/index.omp" title="(access key a)" accesskey="a" target="_BLANK">Ask 3</a></dd>
+    <dd id="logout"><a href="/myaccount/SSOLogout" onclick="return window.confirm('Are you sure?');" title="Logout" accesskey="q">Logout</a></dd>
+  </dl>
+</div>
+
+<div id="branding">
+<h2 class="text-only">Menu</h2>
+<div id="category-options">
+  <div id="menu-container">
+   
+	
+	 
+	
+          <ul id="sections">
+          
+          
+          		<li id="sub-usage" class="option "><a href="/myaccount/postPayFreeUnits.do">Check my usage</a></li>
+		  
+          
+          
+          		<li id="sub-spend-data-usage" class="option "><a href="/myaccount/postpaySpendDataUsageAction.do">Internet &amp; data usage</a></li>
+		  
+          
+          
+          		<li id="sub-access-settings" class="option "><a href="/myaccount/accessSettingsAction.do">Access settings</a></li>
+		  
+          
+          
+          		<li id="sub-account" class="option "><a href="https://my3.three.co.uk/mybill/viewBill.do">Recent bills</a></li>
+		  
+          
+          
+          		<li id="sub-billing-prefs" class="option "><a href="https://my3.three.co.uk/mybill/billingPrefs.do">Billing preferences</a></li>
+		  
+          
+          
+          		<li id="sub-events" class="option "><a href="https://my3.three.co.uk/mybill/prepareQuery.do">Search recent bills</a></li>
+		  
+          
+          
+          		<li id="sub-addons" class="option "><a href="/myaccount/processAddOnsStartAction.do">Buy Add-ons</a></li>
+		  
+          
+          
+          		<li id="sub-cards" class="option "><a href="/myaccount/cardList.do">Manage registered card</a></li>
+		  
+          
+          
+          		<li id="sub-account-status" class="option "><a href="/myaccount/accountStatusAction.do">Account details</a></li>
+		  
+          
+          
+          		<li id="sub-payment-method" class="option last"><a href="https://my3.three.co.uk/mybill/paymentMethod.do">Payment method</a></li>
+		  
+          
+        </ul>
+      
+	 
+	
+	 
+	
+	 
+	
+	 
+	
+	 
+	
+          <ul id="sections">
+          
+          
+          		<li id="sub-contactform" class="option "><a href="/myaccount/inboundEmail.do">By email</a></li>
+		  
+          
+        </ul>
+      
+	
+	
+	
+	
+		
+							
+				<ul id="sections">
+				
+					
+						<div class="option-heading">OPTIONS</div>
+						
+						
+
+										
+
+					<li id="http://threestore.three.co.uk/upgrades/priceplans.aspx?mwa=DSL-OU" class="option">			
+					
+						<a href="/myaccount/remoteMenuClickThroughAction.do?target=http://threestore.three.co.uk/upgrades/priceplans.aspx?mwa=DSL-OU&amp;menuName=Upgrade">Upgrade</a>	
+						
+					</li>
+					
+				</ul>
+			
+		
+			
+			
+	
+		
+			
+			
+	
+		
+			
+			
+	
+			
+	
+		
+			
+			
+	
+		
+			
+			
+	
+			
+	
+		
+			
+			
+	
+		
+			
+			
+	
+		
+			
+			
+	
+			
+	
+			
+		
+	
+	<br/>
+	
+ </div>
+ <div id="bottom-cap"><br>
+ </div>
+ 
+
+ 
+		
+	
+
+</div><!-- /#navigation --> 
+	
+</div> <!-- /#branding -->
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="body-container">
+    <h2>My account</h2>
+  
+    <h3>Check my usage</h3>
+      
+    
+    
+    <div id="help">&nbsp;</div>
+    <div id="body-content" style="width:362px;">
+      
+	
+
+       
+      
+        <div>
+      <table class="bill">
+        <caption>You still have all this to use this month <span class="note">*</span></caption>
+        <thead>
+          <tr>
+            <th><span>&nbsp;</span></th>
+            <th><span>Remaining</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+           
+          
+          
+          
+            
+           
+
+           
+           
+           
+           
+           
+           
+           
+           	 
+            <tr class="odd">
+              <td class="left">
+	              <span>
+		              	
+		              	
+		              		
+		              		
+		              			Voice minutes 
+		  	          	
+	  	          		
+	              		
+	              </span>
+              </td>
+  	          <td>
+  	          	
+		  	        
+		  	        
+		  	        	
+			            
+			          		  	   
+		  	          		
+		                
+		  	          	
+		  	          	
+	                         
+		                    
+	                  	  	<span>338</span>
+			  	       
+			  	       
+		  	       
+  	          	
+  	          </td>
+            </tr>
+            
+            
+              
+	              
+	            
+	            
+            
+            
+          
+          
+          
+            
+           
+
+           
+           
+           
+           
+           
+           
+           
+           	 
+            <tr class="even">
+              <td class="left">
+	              <span>
+		              	
+		              	
+		              		
+		              		
+		              			Internet (MBs) 
+		  	          	
+	  	          		
+	              		
+	              </span>
+              </td>
+  	          <td>
+  	          	
+		  	        
+		  	        
+		  	        	
+			            
+			          		  	   
+		  	          		
+		                
+		  	          	
+		  	          	
+	                         
+		                    
+	                  	  	<span>431</span>
+			  	       
+			  	       
+		  	       
+  	          	
+  	          </td>
+            </tr>
+            
+            
+              
+	            
+	              
+	            
+            
+            
+          
+          
+          
+            
+           
+
+           
+           
+           
+           
+           
+           
+           
+           	 
+            <tr class="odd">
+              <td class="left">
+	              <span>
+		              	
+		              	
+		              		
+		              		
+		              			Texts 
+		  	          	
+	  	          		
+	              		
+	              </span>
+              </td>
+  	          <td>
+  	          	
+		  	        
+		  	        
+		  	        	
+			            
+			          		  	   
+		  	          		
+		                
+		  	          	
+		  	          	
+	                         
+		                    
+	                  	  	<span>3,457</span>
+			  	       
+			  	       
+		  	       
+  	          	
+  	          </td>
+            </tr>
+            
+            
+              
+	              
+	            
+	            
+            
+            
+          
+        </tbody>
+        <tfoot>
+        <tr>
+			<td class="left"></td>
+			<td class="center"></td>
+		 </tr>
+		</tfoot>
+      </table>
+       </div>
+      <!-- commented all CSE Changes <table class="bill">
+        
+	    
+		
+		
+		
+		
+        </tbody>
+      
+      </table>
+      -->
+      <p>
+      
+      
+	    			
+		    
+				       
+				
+				
+				
+				       
+				
+				
+				
+				       
+				
+				
+				
+			
+			
+			 
+    
+
+	  
+	    	      
+       		
+				       
+				
+				
+			
+				       
+				
+				
+			
+				       
+				
+				
+			
+		
+	  
+      </span></p>
+           
+           <br>         
+          
+          
+          <h4>Current spend  <span class="note">*</span></h4>
+		  <br>
+	      
+	       
+		  
+		  
+		  	Since your last bill you've spent <strong>£0.00</strong>.
+		  
+		  
+		  <br><br>
+		  Current spend doesn't include your monthly price plan, Add-ons, recent one-off charges or any recent changes to your account.
+	       <br>
+		    <p><caption><span class="note">* This information was correct at 17:15 26/02/2011.</span></caption></p>
+		
+		
+		
+		
+		  <br>
+		
+		  
+		  
+    <span class="info"><h4>Data usage</h4>
+	      
+		
+         
+          	
+              You've not used any internet data outside of your allowance.
+ 		   	  
+		
+		
+		
+				
+	    </span>  
+	
+     
+
+<hr class="hidden" /><p/>
+<form>
+	<div class="fb_topbar"></div>
+	<div class="fb_head">
+	  <a href="https://my3.three.co.uk/myaccount/postPayFreeUnits.do?state=openOptional" class="go">Go</a>
+	</div>
+	<div class="fb_main">
+      Tell us what you like and don't like by answering a few easy questions. 
+    </div>
+	<div class="fb_bottombar"></div>
+</form>
+      
+    </div> <!-- /body-content -->
+  </div> <!-- /body-container -->
+  <div id="third-column" class="enable">
+   <!--  Ad-Block begin -->
+   
+    <iframe src='https://my3.three.co.uk/imofferserver/offerIFrameAction.do?context=Check my usage&amp;numberOfOffers=1&amp;channel=My3_Web&amp;package=COM01&amp;sessionId=9471542614&amp;orientation=vertical&amp;customerId=9471542614&amp;msisdn=447413770734&amp;accntType=Post-Paid' scrolling='NO' height="111" width='180' MARGINWIDTH="0" MARGINHEIGHT="0 LEFTMARGIN="0" TOPMARGIN="0" frameborder=0 align='right'>
+</iframe>
+
+  </div>
+  <hr />      
+
+	</div>
+	<div id="footer">
+		<div id="copyright">&copy; Hutchison 3G UK Limited 2002 - 2009</div>
+<div id="morelinks"></div>
+  </div>
+</body>
+</html>

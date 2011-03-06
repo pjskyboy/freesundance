@@ -1,0 +1,206 @@
+<table class="bill">
+    <caption>
+        You still have all this to use this month
+        <span class="note">
+            *
+        </span>
+    </caption>
+    <thead>
+        <tr>
+            <th>
+                <span>
+                    
+                </span>
+            </th>
+            <th>
+                <span>
+                    Remaining
+                </span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <tr class="odd">
+            <td class="left">
+                <span>
+                    
+                    
+                    
+                    
+                    Voice minutes
+                    
+                    
+                    
+                </span>
+            </td>
+            <td>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <span>
+                    338
+                </span>
+                
+                
+                
+                
+            </td>
+        </tr>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <tr class="even">
+            <td class="left">
+                <span>
+                    
+                    
+                    
+                    
+                    Internet (MBs)
+                    
+                    
+                    
+                </span>
+            </td>
+            <td>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <span>
+                    431
+                </span>
+                
+                
+                
+                
+            </td>
+        </tr>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <tr class="odd">
+            <td class="left">
+                <span>
+                    
+                    
+                    
+                    
+                    Texts
+                    
+                    
+                    
+                </span>
+            </td>
+            <td>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <span>
+                    3,457
+                </span>
+                
+                
+                
+                
+            </td>
+        </tr>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </tbody>
+    <tfoot>
+        <tr>
+            <td class="left">
+            </td>
+            <td class="center">
+            </td>
+        </tr>
+    </tfoot>
+</table>
