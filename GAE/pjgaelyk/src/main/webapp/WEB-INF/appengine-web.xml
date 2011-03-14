@@ -9,6 +9,7 @@
         <property name="file.encoding" value="UTF-8"/>
         <property name="groovy.source.encoding" value="UTF-8"/>
         <property name="java.util.logging.config.file" value="WEB-INF/logging.properties" />
+        <property name="log4j.configuration" value="file:WEB-INF/log4j.xml" />
     </system-properties>
 
     <!-- Uncomment this section if you want your application to be able to receive XMPP messages -->

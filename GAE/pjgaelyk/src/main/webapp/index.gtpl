@@ -24,5 +24,9 @@ app.env.version: <%= app.env.version %>
 	Click <a href="_ah/admin">here</a> to view admin tools for this app.
 </p>
 
+<p>
+    Click <a href="threeusage.groovy">here</a> to view three usage.
+</p>
+
 <% include '/WEB-INF/includes/footer.gtpl' %>
 

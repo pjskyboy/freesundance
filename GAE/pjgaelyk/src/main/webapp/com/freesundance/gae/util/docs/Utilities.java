@@ -1,3 +1,5 @@
+package com.freesundance.gae.util.docs;
+
 import com.google.gdata.data.DateTime;
 import com.google.gdata.data.Link;
 import com.google.gdata.data.docs.DocumentListEntry;

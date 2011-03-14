@@ -14,7 +14,7 @@ import com.google.gdata.util.AuthenticationException;
 
 import com.google.gdata.util.ServiceException;
 
-import Utilities;
+import com.freesundance.gae.util.docs.Utilities;
 %>
 
 <% include '/WEB-INF/includes/header.gtpl' %>

@@ -1,9 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<name>ThreeUsage</name>
 	<groupId>com.freesundance</groupId>
 	<artifactId>threeusage</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -11,6 +13,12 @@
 			<version>1.3.2</version>
 			<type>jar</type>
 			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
@@ -35,7 +43,8 @@
 
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
-		
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -47,7 +56,58 @@
 						</projectnatures>
 					</configuration>
 				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<configuration>
+						<systemProperties>
+							<name>log4j.configuration</name>
+							<value>${log4j.configuration}</value>
+						</systemProperties>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-report-plugin</artifactId>
+					<version>2.7.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.7.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>emma-maven-plugin</artifactId>
+					<version>1.0-alpha-3</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.7.2</version>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>emma-maven-plugin</artifactId>
+				<version>1.0-alpha-3</version>
+				<inherited>true</inherited>
+			</plugin>
+		</plugins>
+	</reporting>
+
+	<properties>
+		<log4j.configuration>local.log4j.xml</log4j.configuration>
+	</properties>
 </project>

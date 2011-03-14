@@ -2,7 +2,9 @@ package com.freesundance.http;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathExpression;
@@ -19,6 +21,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.client.params.ClientPNames;
 import org.apache.http.client.protocol.ClientContext;
+import org.apache.http.conn.ClientConnectionManager;
 import org.apache.http.cookie.Cookie;
 import org.apache.http.cookie.CookieOrigin;
 import org.apache.http.cookie.CookieSpec;
@@ -30,27 +33,39 @@ import org.apache.http.protocol.HttpContext;
 import org.apache.log4j.Logger;
 import org.xml.sax.InputSource;
 
-public class RunHttpClient {
+public class ThreeUsage {
 
-	private static Logger log = Logger.getLogger(RunHttpClient.class);
+	private static Logger log = Logger.getLogger(ThreeUsage.class);
 
-	private static String THREE_INVALID_USERNAME_OR_PASSWORD_MESSAGE = "Sorry, you've entered an invalid 3 mobile number or password";
+	public static String THREE_INVALID_USERNAME_OR_PASSWORD_MESSAGE = "Sorry, you've entered an invalid 3 mobile number or password";
 
 	private static final String LT_VALUE_STR = "<input type=\"hidden\" name=\"lt\" value=\"";
 	private static final String ST_VALUE_STR = "window.location.href=\"https://my3.three.co.uk/myaccount/postPayFreeUnits.do?ticket";
 
-	static void doIt(String username, String password) throws Exception {
+	private static final String NOTE_STR = "<p><caption><span class=\"note\">* This information was correct at";
+
+	private Map<String, ThreeAllowanceItem> allowance = new HashMap<String, ThreeAllowanceItem>();
+
+	static ThreeUsage doIt(String username, String password)
+			throws ThreeUsageCredentialException, Exception {
+		return doIt(username, password, null);
+	}
+
+	static ThreeUsage doIt(String username, String password,
+			ClientConnectionManager connectionManager)
+			throws ThreeUsageCredentialException, Exception {
 
 		ThreeResponseHandler responseHandler = new ThreeResponseHandler();
+		ThreeUsage threeUsage = new ThreeUsage();
 
-		DefaultHttpClient client = new DefaultHttpClient();
+		DefaultHttpClient client = new DefaultHttpClient(connectionManager);
 		ThreeRedirectStrategy redirectStrategy = new ThreeRedirectStrategy();
 		client.setRedirectStrategy(redirectStrategy);
-		
+
 		log.info("Cookie policy ["
 				+ client.getParams().getParameter(ClientPNames.COOKIE_POLICY)
 				+ "]");
-		
+
 		HttpContext localContext = new BasicHttpContext();
 		CookieStore cookieStore = new BasicCookieStore();
 		localContext.setAttribute(ClientContext.COOKIE_STORE, cookieStore);
@@ -137,7 +152,7 @@ public class RunHttpClient {
 		// follow link
 		//
 		log.info("Open postPayFreeUnits.do");
-		
+
 		params.removeParameter("service");
 		httpGet = new HttpGet(
 				"https://my3.three.co.uk/myaccount/postPayFreeUnits.do?ticket="
@@ -154,41 +169,61 @@ public class RunHttpClient {
 		responseHandler.handleResponse(response);
 		dumpCookies(localContext);
 
-
 		if (responseHandler.getResult().contains("Check my usage")) {
 			String table = retrieveUsageTable(responseHandler.getResult());
-			log.debug(table);
+
+			if (log.isDebugEnabled()) {
+				log.debug(table);
+			}
 
 			table = table.replace("&nbsp;", "");
 
 			XPathFactory xPathFactory = XPathFactory.newInstance();
 			XPath xPath = xPathFactory.newXPath();
 
+			Map<String, ThreeAllowanceItem> allowanceMap = new HashMap<String, ThreeAllowanceItem>();
+
 			for (int row = 1; row < 4; row++) {
-			XPathExpression xPathExpression = xPath
+
+				XPathExpression xPathExpression = xPath
 						.compile("/table/tbody/tr[" + row
 								+ "]/td[1]/span/text()");
-			Object heading = xPathExpression.evaluate(new InputSource(IOUtils
-					.toInputStream(table)));
-			xPathExpression = xPath
-.compile("/table/tbody/tr[" + row
+				Object heading = xPathExpression.evaluate(new InputSource(
+						IOUtils.toInputStream(table)));
+
+				String headingString = heading.toString().trim();
+
+				xPathExpression = xPath.compile("/table/tbody/tr[" + row
 						+ "]/td[2]/span/text()");
-			Object value = xPathExpression.evaluate(new InputSource(IOUtils
-					.toInputStream(table)));
+				Object value = xPathExpression.evaluate(new InputSource(IOUtils
+						.toInputStream(table)));
 
-				log.warn(heading.toString().trim() + " : ["
-					+ value.toString().trim() + "]");
+				ThreeAllowanceItem allowanceItem = new ThreeAllowanceItem(
+						headingString, value.toString().trim());
+				if (log.isDebugEnabled()) {
+					log.debug(allowanceItem.toString());
+				}
+				allowanceMap.put(headingString, allowanceItem);
 			}
+
+			splitters.clear();
+			splitters.add("<");
+			String datetime = findBreadcrumbValue(responseHandler.getResult(),
+					NOTE_STR, splitters);
+
+			allowanceMap.put("datetime", new ThreeAllowanceItem("datetime",
+					datetime));
+			threeUsage.setAllowance(allowanceMap);
 		}
-
-
+		return threeUsage;
 	}
 
-	private static void checkLoginSuccessful(String html) throws Exception {
+	private static void checkLoginSuccessful(String html)
+			throws ThreeUsageCredentialException {
 
-		if (html.contains(
-				THREE_INVALID_USERNAME_OR_PASSWORD_MESSAGE)) {
-			throw new Exception(THREE_INVALID_USERNAME_OR_PASSWORD_MESSAGE);
+		if (html.contains(THREE_INVALID_USERNAME_OR_PASSWORD_MESSAGE)) {
+			throw new ThreeUsageCredentialException(
+					THREE_INVALID_USERNAME_OR_PASSWORD_MESSAGE);
 		}
 
 	}
@@ -207,7 +242,10 @@ public class RunHttpClient {
 
 	static String findBreadcrumbValue(String html, String breadcrumb,
 			List<String> splitList) {
-		log.debug("Looking for [" + breadcrumb + "]");
+
+		if (log.isDebugEnabled()) {
+			log.debug("Looking for [" + breadcrumb + "]");
+		}
 		int ix = html.indexOf(breadcrumb);
 
 		html = html.substring(ix + breadcrumb.length(), html.length());
@@ -224,7 +262,8 @@ public class RunHttpClient {
 
 	static void updateHeaders(HttpRequestBase request, MyHttpParams params)
 			throws UnsupportedEncodingException {
-		request.addHeader("User-Agent",
+		request.addHeader(
+				"User-Agent",
 				"Mozilla/5.0 (X11; U; Linux i686; en-GB; rv:1.9.2.13) Gecko/20101206 Ubuntu/10.04 (lucid) Firefox/3.6.13 GTB7.1");
 		request.addHeader("Accept",
 				"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
@@ -273,7 +312,16 @@ public class RunHttpClient {
 		log.info("*************************************************");
 	}
 
-	public static void main(String[] args) throws Exception {
-		RunHttpClient.doIt(args[0], args[1]);
+	public void setAllowance(Map<String, ThreeAllowanceItem> allowance) {
+		this.allowance = allowance;
 	}
+
+	public Map<String, ThreeAllowanceItem> getAllowance() {
+		return allowance;
+	}
+
+	public static void main(String[] args) throws Exception {
+		log.warn(ThreeUsage.doIt(args[0], args[1]).getAllowance().toString());
+	}
+
 }

@@ -28,8 +28,13 @@ public class ThreeRedirectStrategy implements RedirectStrategy {
 	public HttpUriRequest getRedirect(HttpRequest request,
 			HttpResponse response, HttpContext context)
 			throws ProtocolException {
-		log.info(response.getHeaders("Location")[0].getValue());
-		return new HttpGet(response.getHeaders("Location")[0].getValue());
+		
+		String uri = response.getHeaders("Location")[0].getValue();
+		
+		if (log.isDebugEnabled()) {
+			log.debug("returning [" + uri + "]");
+		}
+		return new HttpGet(uri);
 	}
 
 }
