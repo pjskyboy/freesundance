@@ -1,0 +1,14 @@
+DefaultPackage
+classes.production.webdav
+classes.production.webdav.org.codehaus.groovy.grails.webdav
+grails-app.conf
+grails-app.services
+sampleapps.webdav-testapp.grails-app.conf
+sampleapps.webdav-testapp.grails-app.conf.spring
+sampleapps.webdav-testapp.grails-app.controllers
+sampleapps.webdav-testapp.grails-app.domain
+sampleapps.webdav-testapp.grails-app.services
+scripts
+src.groovy.org.codehaus.groovy.grails.webdav
+test.unit
+test.unit.org.codehaus.groovy.grails.webdav
