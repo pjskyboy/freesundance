@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Implementation-Title: groovy-exif
+Implementation-Version: 0.1
+
