@@ -20,7 +20,7 @@ getFolderName = { datetimeString ->
 	if (null != datetimeString) {
 		renderFormat.format(parseFormat.parse(datetimeString))
 	} else {
-		"00-UNK-2008"
+		"NoExifData"
 	}
 }
 
