@@ -1,0 +1,9 @@
+server:
+    port: 9292
+
+shell:
+  auth:
+    simple:
+      user:
+        name: pjj
+        password: password

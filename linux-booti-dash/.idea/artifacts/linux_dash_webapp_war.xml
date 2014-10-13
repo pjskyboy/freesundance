@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="linux-dash-webapp:war">
+    <output-path>$PROJECT_DIR$/../linux-dash-webapp/target</output-path>
+    <root id="archive" name="linux-dash-webapp.war">
+      <element id="artifact" artifact-name="linux-dash-webapp:war exploded" />
+    </root>
+  </artifact>
+</component>
