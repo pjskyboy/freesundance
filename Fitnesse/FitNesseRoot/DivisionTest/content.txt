@@ -1,0 +1,11 @@
+!path ${FITNESSE_ROOTPATH}/fitnesse-20140201-standalone.jar
+!path ${FITNESSE_ROOTPATH}/FitnesseExamplesV2/workspace/fitnesse1/fitnesse/bin
+
+!contents -R2 -g -p -f -h
+
+!|eg.Division|
+|numerator|	denominator	|quotient?|
+|10.00	|2.00	|5.00|
+|12.60	|3.00	|4.20|
+|-9.00	|3.00	|-3.00|
+|-100.00|	4.00|	-25.00|
