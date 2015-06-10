@@ -1,9 +1,9 @@
 !define TEST_RUNNER {fitlibrary.suite.FitLibraryServer}
 
-!path c:/Fitnesse/fitlibrary-20110301.jar
-!path c:/Fitnesse/fitnesse-20140201-standalone.jar
-!path C:/Fitnesse/FitnesseExamplesV2/workspace/fitnesse1/fitnesse/bin
-!path c:/Fitnesse/log4j-1.2.17.jar
+!path ${FITNESSE_ROOTPATH}/fitlibrary-20110301.jar
+!path ${FITNESSE_ROOTPATH}/fitnesse-20140201-standalone.jar
+!path ${FITNESSE_ROOTPATH}/FitnesseExamplesV2/workspace/fitnesse1/fitnesse/bin
+!path ${FITNESSE_ROOTPATH}/log4j-1.2.17.jar
 
 !contents -R2 -g -p -f -h
 

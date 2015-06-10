@@ -1,6 +1,6 @@
 public class PrimeNumberRowFixture1 extends fit.RowFixture {
        
-  public Object[] query() throws Exception {
+  public PrimeData[] query() throws Exception {
     PrimeData[] array = new PrimeData[5];
     array[0] = new PrimeData(11);
     array[1] = new PrimeData(5);
@@ -11,7 +11,7 @@ public class PrimeNumberRowFixture1 extends fit.RowFixture {
   }
 
   @SuppressWarnings({ "unchecked", "rawtypes" })
-public Class getTargetClass() {
+public Class<PrimeData> getTargetClass() {
     return PrimeData.class;
   }
 }

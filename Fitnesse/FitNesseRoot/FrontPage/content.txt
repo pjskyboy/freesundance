@@ -17,3 +17,4 @@ ColumnFixtureTest7
 PrimeNumberRowFixture1
 ActionFixture
 DoFixtureTest7
+DivisionTest

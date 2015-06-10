@@ -1,4 +1,4 @@
-!path c:/Fitnesse/fitnesse-20140201-standalone.jar
+!path ${FITNESSE_ROOTPATH}/fitnesse-20140201-standalone.jar
 !path C:/Fitnesse/FitnesseExamplesV2/workspace/fitnesse1/fitnesse/bin
 
 !contents -R2 -g -p -f -h
