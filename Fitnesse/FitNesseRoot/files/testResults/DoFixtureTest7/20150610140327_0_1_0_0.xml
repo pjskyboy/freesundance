@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20140201</FitNesseVersion>
+  <rootPath>DoFixtureTest7</rootPath>
+    <result>
+    <counts>
+      <right>2</right>
+      <wrong>3</wrong>
+      <ignores>0</ignores>
+      <exceptions>9</exceptions>
+    </counts>
+    <runTimeInMillis>79</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_RUNNER=fitlibrary.suite.FitLibraryServer&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: c:/Fitnesse/fitlibrary-20110301.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: c:/Fitnesse/fitnesse-20140201-standalone.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:/Fitnesse/FitnesseExamplesV2/workspace/fitnesse1/fitnesse/bin&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: c:/Fitnesse/log4j-1.2.17.jar&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;div class="contents"&gt;
+	&lt;b&gt;Contents:&lt;/b&gt;
+	&lt;ul class="toc1"/&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;ChatStart&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;connect user&lt;/td&gt;
+		&lt;td&gt;sarah&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+				&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;user	sarah&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type userSarahFit(Type1 arg1, Type2 arg2) { }&lt;/li&gt;&lt;li&gt;public Type userSarah(Type p1, Type p2, Type p3) {}&lt;/li&gt;&lt;/ul&gt;&lt;hr/&gt;Possibly in class:&lt;ul&gt;&lt;li&gt;ChatStart&lt;/li&gt;&lt;li&gt;chat.ChatRoom&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;creates&lt;/td&gt;
+		&lt;td&gt;fit&lt;/td&gt;
+		&lt;td&gt;room&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;user	sarah&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type userSarahFit(Type1 arg1, Type2 arg2) { }&lt;/li&gt;&lt;li&gt;public Type userSarah(Type p1, Type p2, Type p3) {}&lt;/li&gt;&lt;/ul&gt;&lt;hr/&gt;Possibly in class:&lt;ul&gt;&lt;li&gt;ChatStart&lt;/li&gt;&lt;li&gt;chat.ChatRoom&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;enters&lt;/td&gt;
+		&lt;td&gt;fit&lt;/td&gt;
+		&lt;td&gt;room&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+				&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;users in room&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.RuntimeException: Unknown room
+	at chat.ChatRoom.usersInRoom(ChatRoom.java:102)
+	at ChatStart.usersInRoom(ChatStart.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invokeTyped(Unknown Source)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(Unknown Source)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(Unknown Source)
+	at fitlibrary.traverse.workflow.caller.DoActionCaller.run(Unknown Source)
+	at fitlibrary.traverse.workflow.DispatchRowInFlow.pickAndRunValidCaller(Unknown Source)
+	at fitlibrary.traverse.workflow.DispatchRowInFlow.interpretRow(Unknown Source)
+	at fitlibrary.traverse.workflow.DoTraverse.interpretRowBeforeWrapping(Unknown Source)
+	at fitlibrary.traverse.workflow.DoTraverse.interpretRow(Unknown Source)
+	at fitlibrary.flow.DoFlowOnTable.runTable(Unknown Source)
+	at fitlibrary.flow.DoFlowOnTable.runTable(Unknown Source)
+	at fitlibrary.flow.DoFlow.runTable(Unknown Source)
+	at fitlibrary.flow.DoFlow.runStorytest(Unknown Source)
+	at fitlibrary.suite.BatchFitLibrary.doTables(Unknown Source)
+	at fitlibrary.suite.BatchFitLibrary.doStorytest(Unknown Source)
+	at fitlibrary.suite.BatchFitLibrary.doTables(Unknown Source)
+	at fitlibrary.suite.FitLibraryServer.doTables(Unknown Source)
+	at fitlibrary.suite.FitLibraryServer.doTables(Unknown Source)
+	at fit.FitServerBridge.process(Unknown Source)
+	at fit.FitServerBridge.run(Unknown Source)
+	at fitlibrary.suite.FitLibraryServer.main(Unknown Source)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+		&lt;td&gt;fit&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2" class="error"&gt;name&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type getName() { }&lt;/li&gt;&lt;li&gt;public Type name() { }&lt;/li&gt;&lt;/ul&gt;&lt;hr/&gt;Possibly in class:&lt;ul&gt;&lt;li&gt;ChatStart&lt;/li&gt;&lt;li&gt;chat.ChatRoom&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2" class="error"&gt;sarah&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type getSarah() { }&lt;/li&gt;&lt;li&gt;public Type sarah() { }&lt;/li&gt;&lt;/ul&gt;&lt;hr/&gt;Possibly in class:&lt;ul&gt;&lt;li&gt;ChatStart&lt;/li&gt;&lt;li&gt;chat.ChatRoom&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+				&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;connect user&lt;/td&gt;
+		&lt;td&gt;rick&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+				&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="fail"&gt;user&lt;/td&gt;
+		&lt;td&gt;rick&lt;/td&gt;
+		&lt;td class="fail"&gt;enters&lt;/td&gt;
+		&lt;td&gt;fit&lt;/td&gt;
+		&lt;td class="fail"&gt;room&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+				&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;users in room&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.RuntimeException: Unknown room
+	at chat.ChatRoom.usersInRoom(ChatRoom.java:102)
+	at ChatStart.usersInRoom(ChatStart.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invokeTyped(Unknown Source)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(Unknown Source)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(Unknown Source)
+	at fitlibrary.traverse.workflow.caller.DoActionCaller.run(Unknown Source)
+	at fitlibrary.traverse.workflow.DispatchRowInFlow.pickAndRunValidCaller(Unknown Source)
+	at fitlibrary.traverse.workflow.DispatchRowInFlow.interpretRow(Unknown Source)
+	at fitlibrary.traverse.workflow.DoTraverse.interpretRowBeforeWrapping(Unknown Source)
+	at fitlibrary.traverse.workflow.DoTraverse.interpretRow(Unknown Source)
+	at fitlibrary.flow.DoFlowOnTable.runTable(Unknown Source)
+	at fitlibrary.flow.DoFlowOnTable.runTable(Unknown Source)
+	at fitlibrary.flow.DoFlow.runTable(Unknown Source)
+	at fitlibrary.flow.DoFlow.runStorytest(Unknown Source)
+	at fitlibrary.suite.BatchFitLibrary.doTables(Unknown Source)
+	at fitlibrary.suite.BatchFitLibrary.doStorytest(Unknown Source)
+	at fitlibrary.suite.BatchFitLibrary.doTables(Unknown Source)
+	at fitlibrary.suite.FitLibraryServer.doTables(Unknown Source)
+	at fitlibrary.suite.FitLibraryServer.doTables(Unknown Source)
+	at fit.FitServerBridge.process(Unknown Source)
+	at fit.FitServerBridge.run(Unknown Source)
+	at fitlibrary.suite.FitLibraryServer.main(Unknown Source)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+		&lt;td&gt;fit&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2" class="error"&gt;name&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type getName() { }&lt;/li&gt;&lt;li&gt;public Type name() { }&lt;/li&gt;&lt;/ul&gt;&lt;hr/&gt;Possibly in class:&lt;ul&gt;&lt;li&gt;ChatStart&lt;/li&gt;&lt;li&gt;chat.ChatRoom&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2" class="error"&gt;sarah&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type getSarah() { }&lt;/li&gt;&lt;li&gt;public Type sarah() { }&lt;/li&gt;&lt;/ul&gt;&lt;hr/&gt;Possibly in class:&lt;ul&gt;&lt;li&gt;ChatStart&lt;/li&gt;&lt;li&gt;chat.ChatRoom&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2" class="error"&gt;rick&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type getRick() { }&lt;/li&gt;&lt;li&gt;public Type rick() { }&lt;/li&gt;&lt;/ul&gt;&lt;hr/&gt;Possibly in class:&lt;ul&gt;&lt;li&gt;ChatStart&lt;/li&gt;&lt;li&gt;chat.ChatRoom&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>DoFixtureTest7</relativePageName>
+    
+    
+    
+  </result>
+  
+    <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>510</totalRunTimeInMillis>
+  
+</testResults>
+

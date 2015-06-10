@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20140201</FitNesseVersion>
+  <rootPath>ColumnFixtureTest7</rootPath>
+    <result>
+    <counts>
+      <right>8</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>5</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;classpath: c:/Fitnesse/fitnesse-20140201-standalone.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:/Fitnesse/FitnesseExamplesV2/workspace/fitnesse1/fitnesse/bin&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;div class="contents"&gt;
+	&lt;b&gt;Contents:&lt;/b&gt;
+	&lt;ul class="toc1"/&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;CalculateDiscount&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;amount&lt;/td&gt;
+		&lt;td&gt;discount()&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td class="pass"&gt;0.00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;100&lt;/td&gt;
+		&lt;td class="pass"&gt;0.00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;999&lt;/td&gt;
+		&lt;td class="pass"&gt;0.00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1000&lt;/td&gt;
+		&lt;td class="pass"&gt;0.00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1010&lt;/td&gt;
+		&lt;td class="pass"&gt;50.50&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1100&lt;/td&gt;
+		&lt;td class="pass"&gt;55.00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1200&lt;/td&gt;
+		&lt;td class="pass"&gt;60.00&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;2000&lt;/td&gt;
+		&lt;td class="pass"&gt;100.00&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>ColumnFixtureTest7</relativePageName>
+    
+    
+    
+  </result>
+  
+    <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>311</totalRunTimeInMillis>
+  
+</testResults>
+

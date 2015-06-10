@@ -1,0 +1,28 @@
+!define TEST_RUNNER {fitlibrary.suite.FitLibraryServer}
+
+!path c:/Fitnesse/fitlibrary-20110301.jar
+!path c:/Fitnesse/fitnesse-20140201-standalone.jar
+!path C:/Fitnesse/FitnesseExamplesV2/workspace/fitnesse1/fitnesse/bin
+!path c:/Fitnesse/log4j-1.2.17.jar
+
+!contents -R2 -g -p -f -h
+
+!|ChatStart|
+
+|connect user|	sarah|
+				
+|user	|sarah|	creates|	fit|	room|
+|user	|sarah|	enters|	fit	|room|
+				
+|users in room	|fit|
+|name|
+|sarah|
+				
+|connect user	|rick|
+				
+|user|	rick|	enters|	fit|	room|
+				
+|users in room	|fit|
+|name|
+|sarah|
+|rick|

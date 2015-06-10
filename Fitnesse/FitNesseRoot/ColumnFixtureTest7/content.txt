@@ -1,0 +1,15 @@
+!path c:/Fitnesse/fitnesse-20140201-standalone.jar
+!path C:/Fitnesse/FitnesseExamplesV2/workspace/fitnesse1/fitnesse/bin
+
+!contents -R2 -g -p -f -h
+
+!| CalculateDiscount |
+| amount | discount() |
+| 0 | 0.00 |
+| 100 | 0.00 |
+| 999 | 0.00 |
+| 1000 | 0.00 |
+| 1010 | 50.50 |
+| 1100 | 55.00 |
+| 1200 | 60.00 |
+| 2000 | 100.00 |

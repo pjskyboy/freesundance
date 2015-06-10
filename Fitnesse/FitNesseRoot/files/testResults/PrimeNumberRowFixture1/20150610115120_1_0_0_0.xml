@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20140201</FitNesseVersion>
+  <rootPath>PrimeNumberRowFixture1</rootPath>
+    <result>
+    <counts>
+      <right>5</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>4</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;classpath: c:/Fitnesse/fitnesse-20140201-standalone.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:/Fitnesse/FitnesseExamplesV2/workspace/fitnesse1/fitnesse/bin&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;div class="contents"&gt;
+	&lt;b&gt;Contents:&lt;/b&gt;
+	&lt;ul class="toc1"/&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;PrimeNumberRowFixture1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;prime&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;3&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;5&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;7&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;11&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;</content>
+    <relativePageName>PrimeNumberRowFixture1</relativePageName>
+    
+    
+    
+  </result>
+  
+    <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>282</totalRunTimeInMillis>
+  
+</testResults>
+

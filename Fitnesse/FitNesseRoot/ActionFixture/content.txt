@@ -1,0 +1,14 @@
+!path c:/Fitnesse/fitnesse-20140201-standalone.jar
+!path C:/Fitnesse/FitnesseExamplesV2/workspace/fitnesse1/fitnesse/bin
+
+!contents -R2 -g -p -f -h
+
+!|fit.ActionFixture|
+|start	|BuyActions|
+|check	|total|	0|
+|enter	|price|	30|
+|press	|buy|
+|check	|total|	30|
+|enter	|price|	100|
+|press	|buy|
+|check	|total|	130|

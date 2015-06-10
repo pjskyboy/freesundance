@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20140201</FitNesseVersion>
+  <rootPath>DoFixtureTest7</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>3</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_RUNNER=fitlibrary.suite.FitLibraryServer&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: c:/Fitnesse/fitlibrary-20110301.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: c:/Fitnesse/fitnesse-20140201-standalone.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:/Fitnesse/FitnesseExamplesV2/workspace/fitnesse1/fitnesse/bin&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: c:/Fitnesse/log4j-1.2.17.jar&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;div class="contents"&gt;
+	&lt;b&gt;Contents:&lt;/b&gt;
+	&lt;ul class="toc1"/&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;ChatStart&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>DoFixtureTest7</relativePageName>
+    
+    
+    
+  </result>
+  
+    <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>1</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>556</totalRunTimeInMillis>
+  
+</testResults>
+

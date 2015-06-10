@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20140201</FitNesseVersion>
+  <rootPath>ActionFixture</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <runTimeInMillis>3</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;classpath: c:/Fitnesse/fitnesse-20140201-standalone.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:/Fitnesse/FitnesseExamplesV2/workspace/fitnesse1/fitnesse/bin&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;div class="contents"&gt;
+	&lt;b&gt;Contents:&lt;/b&gt;
+	&lt;ul class="toc1"/&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;!|fit.ActionFixture&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;start&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: start.&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;BuyActions&lt;a title="create page" href="BuyActions?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;total	0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;enter&lt;/td&gt;
+		&lt;td&gt;proce	30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;press&lt;/td&gt;
+		&lt;td&gt;buy&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;total	30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;enter&lt;/td&gt;
+		&lt;td&gt;price	100&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;press&lt;/td&gt;
+		&lt;td&gt;buy&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;total	130&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>ActionFixture</relativePageName>
+    
+    
+    
+  </result>
+  
+    <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>424</totalRunTimeInMillis>
+  
+</testResults>
+

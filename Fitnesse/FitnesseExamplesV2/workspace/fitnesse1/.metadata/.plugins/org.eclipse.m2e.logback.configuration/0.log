@@ -1,0 +1,37 @@
+2014-05-28 11:12:23,442 [Worker-4] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo.maven.apache.org/maven2
+2014-05-28 11:12:23,499 [Worker-4] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2014-05-28 11:12:39,087 [Worker-4] ERROR o.e.m.c.i.i.nexus.NexusIndexManager - Unable to update index for central|http://repo.maven.apache.org/maven2
+java.io.IOException: connection timed out to http://repo.maven.apache.org/maven2/.index/nexus-maven-repository-index.properties
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher$PipedErrorInputStream.checkError(AsyncFetcher.java:250) ~[org.eclipse.m2e.core_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher$PipedErrorInputStream.read(AsyncFetcher.java:258) ~[org.eclipse.m2e.core_1.4.0.20130601-0317.jar:na]
+	at java.io.PipedInputStream.read(PipedInputStream.java:378) ~[na:1.7.0_51]
+	at java.io.InputStream.read(InputStream.java:101) ~[na:1.7.0_51]
+	at java.util.Properties$LineReader.readLine(Properties.java:434) ~[na:1.7.0_51]
+	at java.util.Properties.load0(Properties.java:353) ~[na:1.7.0_51]
+	at java.util.Properties.load(Properties.java:341) ~[na:1.7.0_51]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.downloadIndexProperties(DefaultIndexUpdater.java:457) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.access$100(DefaultIndexUpdater.java:75) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater$IndexAdaptor.setProperties(DefaultIndexUpdater.java:607) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:788) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:135) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateRemoteIndex(NexusIndexManager.java:1126) [org.eclipse.m2e.core_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateIndex(NexusIndexManager.java:1083) [org.eclipse.m2e.core_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager$1.run(NexusIndexManager.java:660) [org.eclipse.m2e.core_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob.run(IndexUpdaterJob.java:72) [org.eclipse.m2e.core_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53) [org.eclipse.core.jobs_3.5.300.v20130429-1813.jar:na]
+java.net.ConnectException: connection timed out to http://repo.maven.apache.org/maven2/.index/nexus-maven-repository-index.properties
+	at com.ning.http.client.providers.netty.NettyConnectListener.operationComplete(NettyConnectListener.java:95) ~[na:na]
+	at org.jboss.netty.channel.DefaultChannelFuture.notifyListener(DefaultChannelFuture.java:381) ~[na:na]
+	at org.jboss.netty.channel.DefaultChannelFuture.notifyListeners(DefaultChannelFuture.java:372) ~[na:na]
+	at org.jboss.netty.channel.DefaultChannelFuture.setFailure(DefaultChannelFuture.java:334) ~[na:na]
+	at org.jboss.netty.channel.socket.nio.NioClientSocketPipelineSink$Boss.processConnectTimeout(NioClientSocketPipelineSink.java:374) ~[na:na]
+	at org.jboss.netty.channel.socket.nio.NioClientSocketPipelineSink$Boss.run(NioClientSocketPipelineSink.java:283) ~[na:na]
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) ~[na:na]
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:44) ~[na:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) ~[na:1.7.0_51]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) ~[na:1.7.0_51]
+	at java.lang.Thread.run(Thread.java:744) ~[na:1.7.0_51]
+Caused by: java.net.ConnectException: connection timed out
+	at org.jboss.netty.channel.socket.nio.NioClientSocketPipelineSink$Boss.processConnectTimeout(NioClientSocketPipelineSink.java:371) ~[na:na]
+	at org.jboss.netty.channel.socket.nio.NioClientSocketPipelineSink$Boss.run(NioClientSocketPipelineSink.java:283) ~[na:na]
+	... 3 common frames omitted

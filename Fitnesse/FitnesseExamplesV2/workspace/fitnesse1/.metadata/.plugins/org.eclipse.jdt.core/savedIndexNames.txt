@@ -1,0 +1,17 @@
+INDEX VERSION 1.126+C:\workspace\fitnesse1\.metadata\.plugins\org.eclipse.jdt.core
+1801181950.index
+2405136520.index
+3164189273.index
+722144942.index
+3627790069.index
+4110252247.index
+2075332416.index
+2732582999.index
+877060933.index
+3689337201.index
+4184168680.index
+773375289.index
+1342549721.index
+223781545.index
+2951868135.index
+1199665373.index
